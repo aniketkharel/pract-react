@@ -7,7 +7,7 @@ addPageBtn.addEventListener("click", () => {
   ipcRenderer.send("add-page-btn-event", "addition.html");
 });
 
-// const goToViewBtn = document.getElementById("go-to-view-btn");
-// goToViewBtn.addEventListener("click", () => {
-//   ipcRenderer.send("go-to-view-page-event", "viewers.html");
-// });
+const goToHome = document.getElementById("btn-add-page-home");
+goToHome.addEventListener("click", () => {
+  ipcRenderer.send("go-to-home", "index.html");
+});

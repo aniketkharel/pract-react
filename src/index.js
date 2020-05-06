@@ -30,7 +30,7 @@ const createWindow = () => {
     height: 600,
     webPreferences: {
       nodeIntegration: true,
-      preload: path.join(__dirname, "./preloader/preloader.js"),
+      // preload: path.join(__dirname, "./preloader/preloader.js"),
     },
   });
 
@@ -81,4 +81,9 @@ ipcMain.on("add-page-btn-event", (event, args) => {
   saveOfWriteFile.saveOrWriteFile();
   const DB_URL = saveOfWriteFile.readFile();
   console.log(DB_URL);
+});
+
+ipcMain.on("go-to-home", (event, args) => {
+  // and load the index.html of the app.
+  mainWindow.loadFile(path.join(__dirname, args));
 });
