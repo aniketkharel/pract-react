@@ -19,12 +19,19 @@
   "license": "MIT",
   "config": {
     "forge": {
-      "packagerConfig": {},
+      "packagerConfig": {
+        "icon": "aT.ico"
+      },
       "makers": [
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "activities_tracker"
+            "name": "activities_tracker",
+            "win": {
+              "icon": "aT.ico"
+            },
+            "icon": "aT.ico",
+            "setupIcon": "aT.ico"
           }
         },
         {
