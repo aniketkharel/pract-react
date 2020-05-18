@@ -8,8 +8,10 @@
   },
   "build": {
     "appId": "react.electron.starter",
+    "copyright": "Copyright @2020 ${author}",
     "win": {
-      "icon": "build/aTL.png"
+      "icon": "build/aT.png",
+      "target": "NSIS"
     }
   },
   "homepage": "./",
@@ -22,6 +24,7 @@
     "electron-is-dev": "^1.2.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "wait-on": "^4.0.2"
   },

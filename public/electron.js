@@ -2,9 +2,12 @@ const { app, BrowserWindow } = require("electron");
 const path = require("path");
 const isDev = require("electron-is-dev");
 
+let secWindow;
+let win;
+
 function createWindow() {
   // Create the browser window.
-  const win = new BrowserWindow({
+  win = new BrowserWindow({
     width: 800,
     height: 600,
     webPreferences: {
@@ -21,11 +24,35 @@ function createWindow() {
 
   // Open the DevTools.
   //win.webContents.openDevTools();
+
+  // Create the browser window.
+  secWindow = new BrowserWindow({
+    width: 400,
+    height: 400,
+    webPreferences: {
+      nodeIntegration: true,
+    },
+  });
+
+  // and load the index.html of the app.
+  secWindow.loadURL(
+    isDev
+      ? "http://localhost:3000/#about"
+      : `file://${__dirname}/../build/index.html#/about`
+  );
+
+  // Open the DevTools.
+  //win.webContents.openDevTools();
 }
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
+
+app.once("ready-to-show", () => {
+  createWindow();
+});
+
 app.whenReady().then(createWindow);
 
 // Quit when all windows are closed.
