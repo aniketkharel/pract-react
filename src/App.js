@@ -19,7 +19,9 @@ function App() {
         >
           Learn React
         </a>
-        <Link to="/about">Now go to about page</Link>
+        <Link to="/about">
+          <button>About page</button>
+        </Link>
       </header>
     </div>
   );

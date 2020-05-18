@@ -1,7 +1,7 @@
 {
   "name": "react-electron-starter",
   "version": "0.1.0",
-  "main": "public/electron.js",
+  "main": "electron/electron.js",
   "description": "and react-electron-starter-app",
   "author": {
     "name": "aniket kharel"
@@ -9,6 +9,12 @@
   "build": {
     "appId": "react.electron.starter",
     "copyright": "Copyright @2020 ${author}",
+    "files": [
+      "electron/**/*"
+    ],
+    "directories": {
+      "buildResources": "resources"
+    },
     "win": {
       "icon": "build/aT.png",
       "target": "NSIS"

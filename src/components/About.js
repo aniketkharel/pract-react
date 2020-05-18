@@ -8,15 +8,9 @@ export default class About extends Component {
       <div className="App">
         <header className="App-header">
           <p>this is your about page okay ?</p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            learn react
-          </a>
-          <Link to="/">homepage</Link>
+          <Link to="/">
+            <button>Homepage</button>
+          </Link>
         </header>
       </div>
     );
