@@ -17,9 +17,15 @@
       "buildResources": "resources"
     },
     "linux":{
-      "icon": "build/aT.png",
+      "executableName":"wow starter",
+      "icon": "build/300x300.png",
       "target":"deb",
       "category":"Utility"
+    },
+    "dmg":{
+      "background":"build/300x300.png",
+      "backgroundColor":"grey",
+      "icon": "build/300x300.png"
     }
   },
   "homepage": "./",
