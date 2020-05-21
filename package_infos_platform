@@ -1,0 +1,29 @@
+"build": {
+    "appId": "react.electron.starter",
+    "copyright": "Copyright @2020 ${author}",
+    "files": [
+      "electron/**/*"
+    ],
+    "directories": {
+      "buildResources": "resources"
+    },
+    "win": {
+      "icon": "build/aT.png",
+      "target": "NSIS"
+    },
+    "linux":{
+      "icon": "build/aT.png",
+      "target":"deb"
+    }
+  },
+
+
+
+  //platform linux configurations and options
+  https://www.electron.build/configuration/linux
+
+  //Application category lists
+  https://specifications.freedesktop.org/menu-spec/latest/apa.html#main-category-registry
+
+  //deb configurations
+  https://www.electron.build/configuration/dmg

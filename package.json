@@ -4,7 +4,8 @@
   "main": "electron/electron.js",
   "description": "and react-electron-starter-app",
   "author": {
-    "name": "aniket kharel"
+    "name": "aniket kharel",
+    "email": "aniketkhareldev@gmail.com"
   },
   "build": {
     "appId": "react.electron.starter",
@@ -15,9 +16,10 @@
     "directories": {
       "buildResources": "resources"
     },
-    "win": {
+    "linux":{
       "icon": "build/aT.png",
-      "target": "NSIS"
+      "target":"deb",
+      "category":"Utility"
     }
   },
   "homepage": "./",
