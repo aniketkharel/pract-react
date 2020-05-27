@@ -1,24 +1,45 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-function Header() {
+import { MaterialIcons } from "@expo/vector-icons";
+
+function Header({ navigation, title }) {
+  const openMenu = () => {
+    navigation.openDrawer();
+  };
+
   return (
     <View style={styles.header}>
-      <Text style={styles.title}>Todo's</Text>
+      {/* this place is for icons */}
+      <MaterialIcons
+        name="menu"
+        size={28}
+        style={styles.icon}
+        onPress={openMenu}
+      />
+      <View>
+        <Text style={styles.headerText}>{title}</Text>
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   header: {
-    height: 80,
-    paddingTop: 38,
-    backgroundColor: "#673ab7",
+    width: "100%",
+    height: "100%",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
   },
-  title: {
-    textAlign: "center",
-    color: "#fff",
-    fontSize: 20,
+  headerText: {
     fontWeight: "bold",
+    fontSize: 20,
+    color: "#333",
+    letterSpacing: 1,
+  },
+  icon: {
+    position: "absolute",
+    left: 16,
   },
 });
 

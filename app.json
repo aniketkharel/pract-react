@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "nativestarter",
-    "slug": "nativestarter",
+    "name": "reviewtracker",
+    "slug": "reviewtracker",
     "platforms": [
       "ios",
       "android",
@@ -23,6 +23,7 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "description": ""
   }
 }
